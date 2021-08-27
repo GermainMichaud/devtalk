@@ -88,13 +88,15 @@ yarn build
 ## Todo
 
 - [ ] MVP
-  - [ ] Initialize project
+  - [x] Initialize project
   - [ ] Create components
     - [ ] Login
     - [ ] Register
+    - [ ] Navigation
     - [ ] User Profile
     - [ ] Talks
     - [ ] Comment
+    - [ ] ...
   - [ ] Add routing
   - [ ] Add styling
   - [ ] ...
