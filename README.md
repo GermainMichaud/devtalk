@@ -90,7 +90,7 @@ yarn build
 - [ ] MVP
   - [x] Initialize project
   - [ ] Create components
-    - [ ] Login
+    - [x] Login
     - [ ] Register
     - [ ] Navigation
     - [ ] User Profile

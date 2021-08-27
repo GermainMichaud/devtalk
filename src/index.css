@@ -3,9 +3,19 @@
   padding: 0;
   box-sizing: border-box;
   outline: none;
+  font-family: 'Montserrat', 'Open Sans', Helvetica, sans-serif;
 }
 body {
   position: relative;
   width: 100%;
   min-height: 100vh;
+}
+
+button {
+  cursor: pointer;
+  border: inherit;
+}
+
+a {
+  cursor: pointer;
 }
