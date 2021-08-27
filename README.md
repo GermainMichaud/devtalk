@@ -91,7 +91,7 @@ yarn build
   - [x] Initialize project
   - [ ] Create components
     - [x] Login
-    - [ ] Register
+    - [x] Register
     - [ ] Navigation
     - [ ] User Profile
     - [ ] Talks
