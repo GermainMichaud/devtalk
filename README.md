@@ -98,6 +98,7 @@ yarn build
     - [ ] Comment
     - [ ] ...
   - [x] Add routing
+  - [x] Add authentication
   - [ ] Add styling
   - [ ] ...
 

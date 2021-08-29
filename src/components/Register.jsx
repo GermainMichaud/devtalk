@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
+import { authAPI } from '../api'
 import {
   Button,
   Content,
@@ -34,7 +35,7 @@ const Register = () => {
     }))
   }
 
-  const handleFormSubmit = event => {
+  const handleFormSubmit = async event => {
     event.preventDefault()
     setLoading(true)
     for (let key in inputs) {
@@ -51,6 +52,14 @@ const Register = () => {
         password: 'Le mot de passe de confirmation ne correspond pas',
       })
       setInputs(current => ({ ...current, passwordConfirm: '' }))
+    }
+
+    try {
+      await authAPI.register(inputs)
+    } catch (error) {
+      console.log('ERROR REGISTER', error)
+    } finally {
+      setLoading(false)
     }
   }
 

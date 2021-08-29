@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
+import { authAPI } from '../api'
 import {
   Button,
   Content,
@@ -13,7 +14,7 @@ import {
 import Loader from './shared/Loader'
 
 const Login = () => {
-  const [inputs, setInputs] = useState({ email: '', password: '' })
+  const [inputs, setInputs] = useState({ pseudo: '', password: '' })
   const [loading, setLoading] = useState(false)
 
   const handleInputChange = event => {
@@ -24,9 +25,19 @@ const Login = () => {
     }))
   }
 
-  const handleFormSubmit = event => {
+  const handleFormSubmit = async event => {
     event.preventDefault()
     setLoading(true)
+    try {
+      await authAPI.login({
+        pseudo: inputs.pseudo,
+        password: inputs.password,
+      })
+    } catch (err) {
+      console.log('GET ERROR', err)
+    } finally {
+      setLoading(false)
+    }
   }
 
   return (
@@ -38,13 +49,13 @@ const Login = () => {
       <Form onSubmit={handleFormSubmit}>
         <Title>Se connecter</Title>
         <Label>
-          Email
+          Pseudo
           <Input
-            type="email"
-            placeholder="Ex: my@mail.com"
-            name="email"
+            type="text"
+            placeholder="Ex: myPseudo"
+            name="pseudo"
             required
-            value={inputs.email}
+            value={inputs.pseudo}
             onChange={handleInputChange}
           />
         </Label>

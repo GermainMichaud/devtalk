@@ -13,6 +13,7 @@ function App() {
           <Switch location={location} key={location.pathname}>
             <Route path="/login" component={Login} />
             <Route path="/register" component={Register} />
+            <Route path="/" exact render={() => <h1>Talks</h1>} />
           </Switch>
         )}
       />
