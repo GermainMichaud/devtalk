@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import { authAPI } from '../api'
 import {
   Button,
-  Content,
+  Paragraph,
   CustomLink,
   ErrorInput,
   Form,
@@ -65,7 +65,7 @@ const Register = () => {
 
   return (
     <WrapperAuth>
-      <Content>Créez un compte pour pouvoir participer au DevTalk.</Content>
+      <Paragraph>Créez un compte pour pouvoir participer au DevTalk.</Paragraph>
       <Form onSubmit={handleFormSubmit}>
         <Title>S'inscrire</Title>
         <Label>

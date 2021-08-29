@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import { authAPI } from '../api'
 import {
   Button,
-  Content,
+  Paragraph,
   CustomLink,
   Form,
   Input,
@@ -42,10 +42,10 @@ const Login = () => {
 
   return (
     <WrapperAuth reverse>
-      <Content>
+      <Paragraph>
         Connectez-vous pour pouvoir participer au DevTalk.
         <br />
-      </Content>
+      </Paragraph>
       <Form onSubmit={handleFormSubmit}>
         <Title>Se connecter</Title>
         <Label>
