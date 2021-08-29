@@ -2,6 +2,7 @@ import React from 'react'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import Login from './components/Login'
 import Navigation from './components/Navigation'
+import ProtectedRoute from './components/ProtectedRoute'
 import Register from './components/Register'
 
 function App() {
@@ -13,7 +14,7 @@ function App() {
           <Switch location={location} key={location.pathname}>
             <Route path="/login" component={Login} />
             <Route path="/register" component={Register} />
-            <Route path="/" exact render={() => <h1>Talks</h1>} />
+            <ProtectedRoute path="/" exact render={() => <h1>Tasks</h1>} />
           </Switch>
         )}
       />
