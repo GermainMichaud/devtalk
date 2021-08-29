@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { Link } from 'react-router-dom'
 import {
   Button,
   Content,
@@ -155,7 +156,7 @@ const Register = () => {
         <Button bgColor="#dd2c2c" bgColorHover="#d01e1e">
           {loading ? <Loader size={25} /> : "S'inscrire"}
         </Button>
-        <CustomLink>J'ai déjà un compte</CustomLink>
+        <CustomLink to="/login">J'ai déjà un compte</CustomLink>
       </Form>
     </WrapperAuth>
   )

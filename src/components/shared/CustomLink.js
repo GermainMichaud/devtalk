@@ -1,7 +1,9 @@
 import styled from 'styled-components'
+import { Link } from 'react-router-dom'
 
-export const CustomLink = styled.a`
+export const CustomLink = styled(Link)`
   display: inline-block;
+  text-decoration: none;
   position: relative;
   color: #5380d5;
 

@@ -97,7 +97,7 @@ yarn build
     - [ ] Talks
     - [ ] Comment
     - [ ] ...
-  - [ ] Add routing
+  - [x] Add routing
   - [ ] Add styling
   - [ ] ...
 
