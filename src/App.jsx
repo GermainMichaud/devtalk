@@ -4,6 +4,7 @@ import Login from './components/Login'
 import Navigation from './components/Navigation'
 import ProtectedRoute from './components/ProtectedRoute'
 import Register from './components/Register'
+import TalksList from './components/TalksList'
 
 function App() {
   return (
@@ -14,7 +15,7 @@ function App() {
           <Switch location={location} key={location.pathname}>
             <Route path="/login" component={Login} />
             <Route path="/register" component={Register} />
-            <ProtectedRoute path="/" exact render={() => <h1>Tasks</h1>} />
+            <ProtectedRoute path="/" exact component={TalksList} />
           </Switch>
         )}
       />
