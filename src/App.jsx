@@ -1,11 +1,13 @@
 import React from 'react'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import Login from './components/Login'
+import Navigation from './components/Navigation'
 import Register from './components/Register'
 
 function App() {
   return (
     <Router>
+      <Navigation />
       <Route
         render={({ location }) => (
           <Switch location={location} key={location.pathname}>

@@ -5,7 +5,6 @@ export const WrapperAuth = styled.div`
   flex-direction: column;
   align-items: center;
   width: 100%;
-  min-height: 100vh;
   padding: 1rem;
 
   @media screen and (min-width: 780px) {

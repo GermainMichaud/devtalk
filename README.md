@@ -92,7 +92,7 @@ yarn build
   - [ ] Create components
     - [x] Login
     - [x] Register
-    - [ ] Navigation
+    - [x] Navigation
     - [ ] User Profile
     - [ ] Talks
     - [ ] Comment
