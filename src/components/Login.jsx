@@ -44,7 +44,7 @@ const Login = () => {
 
   return (
     <WrapperAuth reverse>
-      <Paragraph>
+      <Paragraph maxWidth="480px">
         Connectez-vous pour pouvoir participer au DevTalk.
         <br />
       </Paragraph>

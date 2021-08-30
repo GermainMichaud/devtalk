@@ -65,7 +65,9 @@ const Register = () => {
 
   return (
     <WrapperAuth>
-      <Paragraph>Créez un compte pour pouvoir participer au DevTalk.</Paragraph>
+      <Paragraph maxWidth="480px">
+        Créez un compte pour pouvoir participer au DevTalk.
+      </Paragraph>
       <Form onSubmit={handleFormSubmit}>
         <Title>S'inscrire</Title>
         <Label>
