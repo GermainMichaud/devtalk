@@ -94,7 +94,7 @@ yarn build
     - [x] Register
     - [x] Navigation
     - [ ] User Profile
-    - [ ] Talks
+    - [x] Talks
     - [x] Talk
     - [ ] Comment
     - [ ] ...

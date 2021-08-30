@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { subjectAPI } from '../api'
 import { Title, Container, Row, Input, Grid, Button, Paragraph } from './shared'
+import Talk from './Talk'
 
 const TalksList = () => {
   const [viewCard, setViewCard] = useState(true)
@@ -27,7 +28,11 @@ const TalksList = () => {
         </Button>
       </Row>
       {talks.length ? (
-        <Grid line={!viewCard}></Grid>
+        <Grid line={!viewCard}>
+          {talks.map(talk => (
+            <Talk key={talk._id} talk={talk} />
+          ))}
+        </Grid>
       ) : (
         <Row>
           <Paragraph>Aucun sujet trouvé</Paragraph>
