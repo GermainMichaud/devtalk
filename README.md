@@ -95,6 +95,7 @@ yarn build
     - [x] Navigation
     - [ ] User Profile
     - [ ] Talks
+    - [x] Talk
     - [ ] Comment
     - [ ] ...
   - [x] Add routing
