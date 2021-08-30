@@ -3,7 +3,7 @@ import { Redirect, Route } from 'react-router-dom'
 import { userAPI } from '../api'
 
 const ProtectedRoute = ({ component: Component, ...rest }) => {
-  const [user, setUser] = useState(null)
+  const [user, setUser] = useState({})
 
   useEffect(() => {
     const getUser = async () => {

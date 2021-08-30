@@ -11,7 +11,8 @@ const axiosInstance = axios.create({
 axiosInstance.interceptors.request.use(
   config => {
     config.headers['authorization'] =
-      localStorage.getItem('devtalk_token') || null
+      'Bearer ' + (localStorage.getItem('devtalk_token') || null)
+    console.log('Bearer ' + (localStorage.getItem('devtalk_token') || null))
     return config
   },
   error => {
@@ -20,9 +21,9 @@ axiosInstance.interceptors.request.use(
 )
 axiosInstance.interceptors.response.use(
   response => {
-    const { jwtoken } = response.data
-    if (jwtoken) {
-      localStorage.setItem('devtalk_token', jwtoken)
+    const { accesToken } = response.data
+    if (accesToken) {
+      localStorage.setItem('devtalk_token', accesToken)
     }
     return response
   },

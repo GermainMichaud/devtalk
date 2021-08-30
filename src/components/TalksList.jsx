@@ -1,9 +1,21 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
+import { subjectAPI } from '../api'
 import { Title, Container, Row, Input, Grid, Button, Paragraph } from './shared'
 
 const TalksList = () => {
   const [viewCard, setViewCard] = useState(true)
   const [talks, setTalks] = useState([])
+
+  useEffect(() => {
+    const getTalks = async () => {
+      try {
+        const { data } = await subjectAPI.getAll()
+        setTalks(data)
+      } catch (error) {}
+    }
+    getTalks()
+    return () => {}
+  }, [])
 
   return (
     <Container>

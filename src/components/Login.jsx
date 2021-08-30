@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Link } from 'react-router-dom'
+import { useHistory } from 'react-router-dom'
 import { authAPI } from '../api'
 import {
   Button,
@@ -16,6 +16,7 @@ import Loader from './shared/Loader'
 const Login = () => {
   const [inputs, setInputs] = useState({ pseudo: '', password: '' })
   const [loading, setLoading] = useState(false)
+  const { replace } = useHistory()
 
   const handleInputChange = event => {
     const { name, value } = event.target
@@ -33,6 +34,7 @@ const Login = () => {
         pseudo: inputs.pseudo,
         password: inputs.password,
       })
+      replace('/')
     } catch (err) {
       console.log('GET ERROR', err)
     } finally {
