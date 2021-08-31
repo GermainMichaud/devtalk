@@ -4,13 +4,18 @@ import { Title, Container, Row, Input, Grid, Button, Paragraph } from './shared'
 import Talk from './Talk'
 
 const TalksList = () => {
+  const author = new URLSearchParams(window.location.search).get('author')
   const [viewCard, setViewCard] = useState(true)
   const [talks, setTalks] = useState([])
 
   useEffect(() => {
     const getTalks = async () => {
       try {
-        const { data } = await subjectAPI.getAll()
+        const queries = {}
+        if (author) {
+          queries.author = author
+        }
+        const { data } = await subjectAPI.getAll(queries)
         setTalks(data)
       } catch (error) {}
     }
